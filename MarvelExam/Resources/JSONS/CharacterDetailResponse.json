@@ -1,0 +1,361 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2021 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2021 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2021 MARVEL</a>",
+  "etag": "ac59e50420deef51483addb55ab475ffb9165faa",
+  "data": {
+    "offset": 0,
+    "limit": 20,
+    "total": 1,
+    "count": 1,
+    "results": [
+      {
+        "id": 1011335,
+        "name": "Maria Hill",
+        "description": "This character needs a description.",
+        "modified": "2014-05-30T14:29:18-0400",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/a/00/535ff3f5397cb",
+          "extension": "jpg"
+        },
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011335",
+        "comics": {
+          "available": 100,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011335/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30090",
+              "name": "Age of Heroes (2010) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/33566",
+              "name": "Age of Heroes (2010) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30092",
+              "name": "Age of Heroes (2010) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30093",
+              "name": "Age of Heroes (2010) #4"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30885",
+              "name": "AGE OF HEROES TPB (Trade Paperback)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29195",
+              "name": "Avengers (2010) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/33336",
+              "name": "Avengers (2010) #1 (ROMITA JR. VARIANT)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/33483",
+              "name": "Avengers (2010) #1 (DJURDJEVIC VARIANT)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/33562",
+              "name": "Avengers (2010) #1 (ROMITA SR. VARIANT)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/33572",
+              "name": "Avengers (2010) #1 (I AM AN AVENGER BLANK COVER VARIANT)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/33335",
+              "name": "Avengers (2010) #1 (HEROIC AGE VARIANT)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29205",
+              "name": "Avengers (2010) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29206",
+              "name": "Avengers (2010) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/34142",
+              "name": "Avengers (2010) #3 (ROMITA JR. VARIANT)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/34139",
+              "name": "Avengers (2010) #5"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29211",
+              "name": "Avengers (2010) #8"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29212",
+              "name": "Avengers (2010) #9"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29196",
+              "name": "Avengers (2010) #10"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29197",
+              "name": "Avengers (2010) #11"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38617",
+              "name": "Avengers (2010) #11 (CAPTAIN AMERICA 70TH ANNIVERSARY VARIANT)"
+            }
+          ],
+          "returned": 20
+        },
+        "series": {
+          "available": 29,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011335/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9790",
+              "name": "Age of Heroes (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/10235",
+              "name": "AGE OF HEROES TPB (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9085",
+              "name": "Avengers (2010 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13320",
+              "name": "Avengers Annual (2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/18398",
+              "name": "Avengers World (2014 - 2015)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/23601",
+              "name": "Avengers: Standoff (2017)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/21098",
+              "name": "Captain America: Steve Rogers (2016 - 2017)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/21100",
+              "name": "CAPTAIN AMERICA: STEVE ROGERS VOL. 2 - THE TRIAL OF MARIA HILL TPB (2017)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/27948",
+              "name": "Civil War: Marvels Snapshots (2020)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/16583",
+              "name": "Indestructible Hulk (2012 - 2014)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/23595",
+              "name": "Indestructible Hulk by Mark Waid: The Complete Collection (2017)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/4889",
+              "name": "Invincible Iron Man (2008 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7043",
+              "name": "Invincible Iron Man Vol. 1: The Five Nightmares (2009 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/977",
+              "name": "Irredeemable Ant-Man (2006 - 2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2423",
+              "name": "Irredeemable Ant-Man Vol. 1: Low-Life (2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/22645",
+              "name": "Jessica Jones (2016 - 2018)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/22804",
+              "name": "Jessica Jones Vol. 2: The Secrets of Maria Hill (2017)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/5381",
+              "name": "Mighty Avengers Vol. 1: The Ultron Initiative (2008)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/10639",
+              "name": "Moon Knight (2010 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/947",
+              "name": "Moon Knight (2006 - 2009)"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 121,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011335/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/3443",
+              "name": "4 of 5 - Breakout!",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/3455",
+              "name": "6 of 6 - Breakout!",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/3498",
+              "name": "New Avengers (2004) #25",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5500",
+              "name": "Irredeemable Ant-Man (2006) #3",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/8682",
+              "name": "3 of 6 - Ultron; THE INITIATIVE BANNER",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/36147",
+              "name": "Venom Bomb 1 of 6",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/36886",
+              "name": "Venom Bomb 2 of 5",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/44681",
+              "name": "Venom Bomb 5 of 5",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/45541",
+              "name": "Secret Invasion 1 of 8",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/46978",
+              "name": "Invincible Iron Man (2008) #1",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/47587",
+              "name": "Invincible Iron Man (2008) #3",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/47757",
+              "name": "Moon Knight (2006) #21",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/47758",
+              "name": "The Death Of Mark Spector 1 0f 5",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/47886",
+              "name": "Invincible Iron Man (2008) #4",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/48338",
+              "name": "Secret Invasion 7 of 8",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/48573",
+              "name": "Invincible Iron Man (2008) #5",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/49215",
+              "name": "Invincible Iron Man (2008) #6",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/50964",
+              "name": "Interior #50964",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/51332",
+              "name": "Interior #51332",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/52341",
+              "name": "Interior #52341",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 20
+        },
+        "events": {
+          "available": 8,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011335/events",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+              "name": "Civil War"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/318",
+              "name": "Dark Reign"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/302",
+              "name": "Fear Itself"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/315",
+              "name": "Infinity"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/317",
+              "name": "Inhumanity"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/255",
+              "name": "Initiative"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/269",
+              "name": "Secret Invasion"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/events/316",
+              "name": "X-Men: Battle of the Atom"
+            }
+          ],
+          "returned": 8
+        },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2933/maria_hill?utm_campaign=apiRef&utm_source=474693496a5bf73de481d363dd37576a"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Hill,_Maria?utm_campaign=apiRef&utm_source=474693496a5bf73de481d363dd37576a"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011335/maria_hill?utm_campaign=apiRef&utm_source=474693496a5bf73de481d363dd37576a"
+          }
+        ]
+      }
+    ]
+  }
+}
