@@ -22,6 +22,8 @@ class CharacterDetailViewController: BaseViewController {
         view.layer.cornerRadius = 55
         view.clipsToBounds = true
         view.isSkeletonable = true
+        view.layer.borderWidth = 3
+        view.layer.borderColor = UIColor.black.cgColor
         return view
     }()
     
@@ -30,9 +32,11 @@ class CharacterDetailViewController: BaseViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isSkeletonable = true
         view.numberOfLines = 1
-        view.font = UIFont.preferredFont(forTextStyle: .headline)
+        view.font = UIFont.systemFont(ofSize: 27, weight: .bold)
         view.textAlignment = .center
         view.adjustsFontSizeToFitWidth = true
+        view.textColor = UIColor.darkClouds
+        view.minimumScaleFactor = 0.5
         return view
     }()
     
@@ -41,10 +45,12 @@ class CharacterDetailViewController: BaseViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isSkeletonable = true
         view.numberOfLines = 5
-        view.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        view.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         view.adjustsFontSizeToFitWidth = true
         view.sizeToFit()
         view.textAlignment = .left
+        view.textColor = UIColor.darkClouds
+        view.minimumScaleFactor = 0.5
         return view
     }()
     
@@ -74,6 +80,7 @@ class CharacterDetailViewController: BaseViewController {
         view.addSubview(imgAvatar)
         view.addSubview(lblName)
         view.addSubview(lblDescription)
+        view.backgroundColor = UIColor(named: "Yellow")
         setupConstraints()
         view.isSkeletonable = true
         imgAvatar.skeletonCornerRadius = 55
@@ -145,7 +152,7 @@ extension CharacterDetailViewController: CharacterDetailDisplayLogic {
         DispatchQueue.main.async {
             self.lblDescription.numberOfLines = 0
             self.lblName.text = detail.name
-            self.lblDescription.text = detail.description
+            self.lblDescription.text = detail.description.isEmpty ? "Este personaje no cuenta con descripción." : detail.description
             
             self.imgAvatar.kf.setImage(with: URL(string: urlString), placeholder: nil, options: nil) { [weak self](result: Result<RetrieveImageResult, KingfisherError>) in
                 switch result {

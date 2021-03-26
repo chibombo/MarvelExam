@@ -20,6 +20,8 @@ class CharactersListViewController: BaseViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.delegate = self
         table.dataSource = self
+        table.register(BaseTableViewCell.self, forCellReuseIdentifier: "cell")
+        table.backgroundColor = UIColor(named: "Yellow")?.withAlphaComponent(0.9)
         return table
     }()
 
@@ -108,13 +110,18 @@ extension CharactersListViewController: UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell()
+//        let cell: UITableViewCell = UITableViewCell()
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = characters[indexPath.row].name
+        
+        cell.backgroundColor = (indexPath.row % 2) == 0 ? UIColor(named: "Yellow") : UIColor(named: "YellowMustard")
+
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let character = characters[indexPath.row]
+        
         router?.routeToDetail(id: character.id)
     }
 }

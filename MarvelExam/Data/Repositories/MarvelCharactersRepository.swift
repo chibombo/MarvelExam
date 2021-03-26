@@ -14,7 +14,7 @@ class MarvelCharactersRepository: BaseRepository, MarvelRepositoryLogic {
     func fetchCharacters(completionHandler: @escaping (Result<FetchCharactersResponse, NetworkingError>) -> Void) {
         let timestamp = Int(Date().timeIntervalSinceReferenceDate)
         let hash = ("\(timestamp)"+privateKey+publicKey).MD5
-        let endpoint = "https://gateway.marvel.com:443/v1/public/characters?limit=50&ts=\(timestamp)&apikey=\(publicKey)&hash=\(hash)"
+        let endpoint = "https://gateway.marvel.com:443/v1/public/characters?limit=100&ts=\(timestamp)&apikey=\(publicKey)&hash=\(hash)"
         urlSession.executeRequest(url: endpoint,
                                   httpMethod: .get,
                                   headers: nil,
