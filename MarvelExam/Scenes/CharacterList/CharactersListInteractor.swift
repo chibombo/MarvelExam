@@ -19,6 +19,7 @@ class CharactersListInteractor: CharactersListBusinessLogic {
 
     init(presenter: CharactersListPresentationLogic, repository: MarvelRepositoryLogic) {
         self.presenter = presenter
+        self.repository = repository
     }
 
     init() {}

@@ -53,9 +53,18 @@ class CharacterDetailViewController: BaseViewController {
     
     var characterId: Int = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()        
         setupUI()
         let request = CharacterDetailRequest(id: characterId)
         interactor?.getCharacterDetail(request: request)

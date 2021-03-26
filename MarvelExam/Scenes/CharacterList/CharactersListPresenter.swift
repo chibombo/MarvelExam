@@ -24,6 +24,7 @@ class CharactersListPresenter: CharactersListPresentationLogic {
 
     func presentCharactersList(response: FetchCharactersResponse) {        viewController?.displayCharacters(characters: response.data.results)
     }
+
     func presentAlert(error: Error) {
         viewController?.displayAlert(title: "Error", message: error.localizedDescription)
     }

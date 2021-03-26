@@ -16,6 +16,12 @@ class CharacterDetailPresenter: CharacterDetailPresentationLogic {
     
     weak var viewController: CharacterDetailDisplayLogic?
     
+    init() {}
+    
+    init(viewController: CharacterDetailDisplayLogic?) {
+        self.viewController = viewController
+    }
+    
     func presentDetail(response: CharacterDetailResponse) {
         if let details: Character = response.data.results.first {
             viewController?.displayDetail(detail: details)

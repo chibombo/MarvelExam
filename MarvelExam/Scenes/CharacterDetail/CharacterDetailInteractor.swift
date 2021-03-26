@@ -16,6 +16,13 @@ class CharacterDetailInteractor: CharacterDetailBusinessLogic {
     var presenter: CharacterDetailPresentationLogic?
     var repository: MarvelRepositoryLogic?
     
+    init() {}
+    
+    init(presenter: CharacterDetailPresentationLogic?, repository: MarvelRepositoryLogic?) {
+        self.presenter = presenter
+        self.repository = repository
+    }
+    
     func getCharacterDetail(request: CharacterDetailRequest) {
         repository?.fetchCharacterDetail(request: request, completionHandler: { [weak self](result: Result<CharacterDetailResponse, NetworkingError>) in
             switch result {
