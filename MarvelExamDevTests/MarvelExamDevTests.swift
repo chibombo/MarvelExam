@@ -1,14 +1,13 @@
 //
-//  MarvelExamTests.swift
-//  MarvelExamTests
+//  MarvelExamDevTests.swift
+//  MarvelExamDevTests
 //
-//  Created by Luis Genaro Arvizu Vega on 22/03/21.
+//  Created by Luis Genaro Arvizu Vega on 25/03/21.
 //
 
 import XCTest
-@testable import MarvelExam
 
-class MarvelExamTests: XCTestCase {
+class MarvelExamDevTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -25,7 +24,7 @@ class MarvelExamTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

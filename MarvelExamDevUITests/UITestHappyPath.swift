@@ -7,23 +7,33 @@
 
 import XCTest
 
-class MarvelExamUITests: XCTestCase {
+class UITestHappyPath: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testHappyPath() throws {
         let app = XCUIApplication()
         app.launch()
+        
+        let tableView = app.tables.element
+        XCTAssert(tableView.exists)
+        
+        let row = tableView.cells.firstMatch
+        XCTAssert(row.exists)
+        
+        row.tap()
+        
+        let lblName = app.staticTexts["A.I.M."]
+        if lblName.waitForExistence(timeout: 5) {
+            XCTAssert(lblName.exists)
+        }
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testLaunchPerformance() throws {

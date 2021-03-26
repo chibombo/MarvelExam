@@ -26,8 +26,40 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      region = "MX"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C62BD143260BB92C0049BC5E"
+            BuildableName = "MarvelExamDev.app"
+            BlueprintName = "MarvelExamDev"
+            ReferencedContainer = "container:MarvelExam.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C62F7A93260D59F70022A089"
+               BuildableName = "MarvelExamDevUITests.xctest"
+               BlueprintName = "MarvelExamDevUITests"
+               ReferencedContainer = "container:MarvelExam.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C62F7AD4260D5AEC0022A089"
+               BuildableName = "MarvelExamDevTests.xctest"
+               BlueprintName = "MarvelExamDevTests"
+               ReferencedContainer = "container:MarvelExam.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
