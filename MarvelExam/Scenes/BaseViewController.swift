@@ -28,9 +28,9 @@ class BaseViewController: UIViewController {
         MBProgressHUD.hide(for: controller.view, animated: true)
     }
     
-    func showAlert(title: String, message: String, handler: ((UIAlertAction) -> Void)?) {
+    func showAlert(title: String, message: String, buttonText: String = "OK", handler: ((UIAlertAction) -> Void)?) {
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: handler)
+        let action: UIAlertAction = UIAlertAction(title: buttonText, style: .default, handler: handler)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }

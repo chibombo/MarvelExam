@@ -93,8 +93,9 @@ extension CharactersListViewController: CharactersListDisplayLogic {
     func displayAlert(title: String, message: String) {
         DispatchQueue.main.async {
             self.hideHud()
-            self.showAlert(title: title, message: message) { (_) in
-                print("Error")
+            self.showAlert(title: title, message: message, buttonText: "Reintentar") { [weak self](_) in
+                self?.showHud()
+                self?.interactor?.fetchCharacters()
             }
         }
 

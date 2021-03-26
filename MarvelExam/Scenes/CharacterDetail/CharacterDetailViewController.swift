@@ -161,8 +161,8 @@ extension CharacterDetailViewController: CharacterDetailDisplayLogic {
     }
     
     func displayAlert(title: String, message: String) {
-        showAlert(title: title, message: message) { (_) in
-            print("Ocurrio un Error")
+        showAlert(title: title, message: message, buttonText: "Regresar") { [weak self](_) in
+            self?.navigationController?.popViewController(animated: true)
         }
     }
 }
