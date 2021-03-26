@@ -22,3 +22,6 @@ VIP
 * iOS 13+
 * Only iPhones
 * Darkmode disabled
+
+## Note
+Swiftlint implemented using Homebrew
