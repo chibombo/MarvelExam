@@ -9,7 +9,7 @@ import Foundation
 @testable import MarvelExamDev
 
 class CharacterDetailBusinessLogicSpy: CharacterDetailBusinessLogic {
-    
+
     var isCharacterDetailGotten: Bool = false
 
     func getCharacterDetail(request: CharacterDetailRequest) {

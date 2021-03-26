@@ -20,15 +20,15 @@ class UITestHappyPath: XCTestCase {
     func testHappyPath() throws {
         let app = XCUIApplication()
         app.launch()
-        
+
         let tableView = app.tables.element
         XCTAssert(tableView.exists)
-        
+
         let row = tableView.cells.firstMatch
         XCTAssert(row.exists)
-        
+
         row.tap()
-        
+
         let lblName = app.staticTexts["A.I.M."]
         if lblName.waitForExistence(timeout: 5) {
             XCTAssert(lblName.exists)

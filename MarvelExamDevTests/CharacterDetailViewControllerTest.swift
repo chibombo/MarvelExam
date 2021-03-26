@@ -11,7 +11,7 @@ import XCTest
 class CharacterDetailViewControllerTest: XCTestCase {
 
     var viewController: CharacterDetailViewController!
-    
+
     override func setUpWithError() throws {
         viewController = CharacterDetailViewController()
     }

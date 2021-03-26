@@ -26,19 +26,19 @@ class CharacterDetailPresenterTest: XCTestCase {
     func testPresenter_whenCharacter_isDisplayed() throws {
         if let data = UtilitiesWorker.jsonToData(name: "CharacterDetailResponse"),
            let response = Utilities.convertDataToDecodable(decodable: CharacterDetailResponse.self, data: data) {
-            
+
             presenter.presentDetail(response: response)
-            
+
             XCTAssertTrue(spy.isDetailDisplayed, "Detail not Displayed")
-            
+
         } else {
             XCTAssert(false, "CharacterDetailResponse Error")
         }
     }
-    
+
     func testPresenter_whenAlert_isDisplayed() throws {
         presenter.presentAlert(error: NetworkingError.unknow)
-        
+
         XCTAssertTrue(spy.isAlertDisplayed, "Allert not Displayed")
     }
 }

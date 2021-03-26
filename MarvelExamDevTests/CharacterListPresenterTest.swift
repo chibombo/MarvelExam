@@ -12,7 +12,7 @@ class CharacterListPresenterTest: XCTestCase {
 
     var presenter: CharactersListPresenter!
     var spy: CharactersListDisplayLogicSpy!
-    
+
     override func setUpWithError() throws {
         spy = CharactersListDisplayLogicSpy()
         presenter = CharactersListPresenter(viewController: spy)

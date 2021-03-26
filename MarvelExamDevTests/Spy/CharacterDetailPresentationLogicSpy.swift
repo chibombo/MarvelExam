@@ -9,7 +9,7 @@ import Foundation
 @testable import MarvelExamDev
 
 class CharacterDetailPresentationLogicSpy: CharacterDetailPresentationLogic {
-    
+
     var isDetailPresented: Bool = false
     var isAlertPresented: Bool = false
 

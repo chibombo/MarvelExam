@@ -9,18 +9,17 @@ import Foundation
 @testable import MarvelExamDev
 
 class CharacterDetailDisplayLogicSpy: CharacterDetailDisplayLogic {
-    
+
     var isDetailDisplayed: Bool = false
     var isAlertDisplayed: Bool = false
 
     func displayDetail(detail: Character) {
         isDetailDisplayed = true
-        
+
     }
-    
+
     func displayAlert(title: String, message: String) {
         isAlertDisplayed = true
     }
-    
-    
+
 }

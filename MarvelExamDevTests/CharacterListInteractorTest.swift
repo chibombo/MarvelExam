@@ -9,10 +9,10 @@ import XCTest
 @testable import MarvelExamDev
 
 class CharacterListInteractorTest: XCTestCase {
-    
+
     var interactor: CharactersListInteractor!
     var spy: CharactersListPresentationLogicSpy!
-    
+
     override func setUpWithError() throws {
         spy = CharactersListPresentationLogicSpy()
         interactor = CharactersListInteractor(presenter: spy, repository: MarvelCharactersRepositoryMock())

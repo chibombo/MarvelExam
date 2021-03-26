@@ -12,10 +12,10 @@ class MarvelCharactersRepositoryErrorMock: MarvelRepositoryLogic {
     func fetchCharacters(completionHandler: @escaping (Result<FetchCharactersResponse, NetworkingError>) -> Void) {
         completionHandler(.failure(NetworkingError.serviceError))
     }
-    
-    func fetchCharacterDetail(request: CharacterDetailRequest, completionHandler: @escaping (Result<CharacterDetailResponse, NetworkingError>) -> Void) {
+
+    func fetchCharacterDetail(request: CharacterDetailRequest,
+                              completionHandler: @escaping (Result<CharacterDetailResponse, NetworkingError>) -> Void) {
         completionHandler(.failure(NetworkingError.serviceError))
     }
-    
-    
+
 }

@@ -12,7 +12,7 @@ class CharacterDetailInteractorTest: XCTestCase {
 
     var interactor: CharacterDetailInteractor!
     var spy: CharacterDetailPresentationLogicSpy!
-    
+
     override func setUpWithError() throws {
         spy = CharacterDetailPresentationLogicSpy()
         interactor = CharacterDetailInteractor(presenter: spy, repository: MarvelCharactersRepositoryMock())
@@ -26,12 +26,12 @@ class CharacterDetailInteractorTest: XCTestCase {
     func testInteractor_whenCharacter_isGotten() throws {
 
         let request: CharacterDetailRequest = CharacterDetailRequest(id: 123)
-        
+
         interactor.getCharacterDetail(request: request)
-        
+
         XCTAssertTrue(spy.isDetailPresented, "Character not gotten")
     }
-    
+
     func testInteractor_whenCharacter_notGotten() throws {
         let request: CharacterDetailRequest = CharacterDetailRequest(id: 123)
 
