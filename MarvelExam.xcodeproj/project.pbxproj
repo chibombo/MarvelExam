@@ -418,6 +418,7 @@
 		C682DE912609520A00F5329D = {
 			isa = PBXGroup;
 			children = (
+				C633491A260E7A26002B5D42 /* README.md */,
 				C682DE9C2609520A00F5329D /* MarvelExam */,
 				C62F7A95260D59F70022A089 /* MarvelExamDevUITests */,
 				C62F7AD6260D5AEC0022A089 /* MarvelExamDevTests */,
@@ -449,7 +450,6 @@
 				C6DEB8DC260A691D00855358 /* Domain */,
 				C682DED0260960CE00F5329D /* Scenes */,
 				C62BD0FC260BA9B10049BC5E /* .swiftlint.yml */,
-				C633491A260E7A26002B5D42 /* README.md */,
 			);
 			path = MarvelExam;
 			sourceTree = "<group>";
