@@ -16,7 +16,7 @@ protocol CharacterDetailDisplayLogic: class {
 
 class CharacterDetailViewController: BaseViewController {
 // MARK: - Outlets
-    lazy var imgAvatar: UIImageView = {
+    lazy var avatarImage: UIImageView = {
         let view: UIImageView = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 55
@@ -27,7 +27,7 @@ class CharacterDetailViewController: BaseViewController {
         return view
     }()
     
-    lazy var lblName: UILabel = {
+    lazy var nameLabel: UILabel = {
         let view: UILabel = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isSkeletonable = true
@@ -40,7 +40,7 @@ class CharacterDetailViewController: BaseViewController {
         return view
     }()
     
-    lazy var lblDescription: UILabel = {
+    lazy var descriptionLabel: UILabel = {
         let view: UILabel = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isSkeletonable = true
@@ -77,51 +77,51 @@ class CharacterDetailViewController: BaseViewController {
     }
     
     private func setupUI() {
-        view.addSubview(imgAvatar)
-        view.addSubview(lblName)
-        view.addSubview(lblDescription)
+        view.addSubview(avatarImage)
+        view.addSubview(nameLabel)
+        view.addSubview(descriptionLabel)
         view.backgroundColor = UIColor(named: "Yellow")
         setupConstraints()
         view.isSkeletonable = true
-        imgAvatar.skeletonCornerRadius = 55
-        imgAvatar.showAnimatedGradientSkeleton()
-        lblName.showAnimatedGradientSkeleton()
-        lblDescription.showAnimatedGradientSkeleton()
+        avatarImage.skeletonCornerRadius = 55
+        avatarImage.showAnimatedGradientSkeleton()
+        nameLabel.showAnimatedGradientSkeleton()
+        descriptionLabel.showAnimatedGradientSkeleton()
     }
     
     private func setupConstraints() {
         let safeArea = view.safeAreaLayoutGuide
         
-        let imageConstraints = [imgAvatar.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
-                                imgAvatar.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-                                imgAvatar.widthAnchor.constraint(equalToConstant: 110),
-                                imgAvatar.heightAnchor.constraint(equalToConstant: 110)]
+        let imageConstraints = [avatarImage.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 20),
+                                avatarImage.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+                                avatarImage.widthAnchor.constraint(equalToConstant: 110),
+                                avatarImage.heightAnchor.constraint(equalToConstant: 110)]
         
         NSLayoutConstraint.activate(imageConstraints)
         
-        let nameConstraints = [lblName.topAnchor.constraint(equalTo: imgAvatar.bottomAnchor, constant: 15),
-                               lblName.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
-                               lblName.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
-                               lblName.heightAnchor.constraint(equalToConstant: 30)]
+        let nameConstraints = [nameLabel.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 15),
+                               nameLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+                               nameLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16),
+                               nameLabel.heightAnchor.constraint(equalToConstant: 30)]
         
         NSLayoutConstraint.activate(nameConstraints)
         
-        let descriptionConstraints = [lblDescription.topAnchor.constraint(equalTo: lblName.bottomAnchor, constant: 15),
-                                      lblDescription.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
-                                      lblDescription.bottomAnchor.constraint(lessThanOrEqualTo: safeArea.bottomAnchor, constant: -16),
-                                      lblDescription.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16)]
+        let descriptionConstraints = [descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 15),
+                                      descriptionLabel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+                                      descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: safeArea.bottomAnchor, constant: -16),
+                                      descriptionLabel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16)]
         
         NSLayoutConstraint.activate(descriptionConstraints)
     }
     
     private func toggleSkeleton() {
-        if lblName.isSkeletonActive {
-            lblName.hideSkeleton()
-            lblDescription.hideSkeleton()
+        if nameLabel.isSkeletonActive {
+            nameLabel.hideSkeleton()
+            descriptionLabel.hideSkeleton()
         } else {
-            imgAvatar.showAnimatedGradientSkeleton()
-            lblName.showAnimatedGradientSkeleton()
-            lblDescription.showAnimatedGradientSkeleton()
+            avatarImage.showAnimatedGradientSkeleton()
+            nameLabel.showAnimatedGradientSkeleton()
+            descriptionLabel.showAnimatedGradientSkeleton()
         }
     }
     
@@ -150,15 +150,15 @@ extension CharacterDetailViewController: CharacterDetailDisplayLogic {
         let urlString = "\(detail.thumbnail.path).\(detail.thumbnail.fileType)"
         
         DispatchQueue.main.async {
-            self.lblDescription.numberOfLines = 0
-            self.lblName.text = detail.name
-            self.lblDescription.text = detail.description.isEmpty ? "Este personaje no cuenta con descripción." : detail.description
+            self.descriptionLabel.numberOfLines = 0
+            self.nameLabel.text = detail.name
+            self.descriptionLabel.text = detail.description.isEmpty ? "Este personaje no cuenta con descripción." : detail.description
             
-            self.imgAvatar.kf.setImage(with: URL(string: urlString), placeholder: nil, options: nil) { [weak self](result: Result<RetrieveImageResult, KingfisherError>) in
+            self.avatarImage.kf.setImage(with: URL(string: urlString), placeholder: nil, options: nil) { [weak self](result: Result<RetrieveImageResult, KingfisherError>) in
                 switch result {
                 case .success:
-                    self?.imgAvatar.layer.cornerRadius = 55
-                    self?.imgAvatar.hideSkeleton()
+                    self?.avatarImage.layer.cornerRadius = 55
+                    self?.avatarImage.hideSkeleton()
                 case .failure(let error):
                     self?.displayAlert(title: "Error", message: error.localizedDescription)
                 }

@@ -28,6 +28,6 @@ class CharacterDetailViewControllerTest: XCTestCase {
         viewController.interactor?.getCharacterDetail(request: request)
         waitForExpectations(timeout: 5, handler: nil)
 
-        XCTAssert(viewController.lblName.text == "A.I.M.", "Get detail failed")
+        XCTAssert(viewController.nameLabel.text == "A.I.M.", "Get detail failed")
     }
 }

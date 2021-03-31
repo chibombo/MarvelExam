@@ -110,10 +110,9 @@ extension CharactersListViewController: UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell: UITableViewCell = UITableViewCell()
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = characters[indexPath.row].name
         
+        cell.textLabel?.text = characters[indexPath.row].name        
         cell.backgroundColor = (indexPath.row % 2) == 0 ? UIColor(named: "Yellow") : UIColor(named: "YellowMustard")
 
         return cell

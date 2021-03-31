@@ -22,7 +22,8 @@ class CharactersListPresenter: CharactersListPresentationLogic {
 
     init() {}
 
-    func presentCharactersList(response: FetchCharactersResponse) {        viewController?.displayCharacters(characters: response.data.results)
+    func presentCharactersList(response: FetchCharactersResponse) {
+        viewController?.displayCharacters(characters: response.data.results)
     }
 
     func presentAlert(error: Error) {

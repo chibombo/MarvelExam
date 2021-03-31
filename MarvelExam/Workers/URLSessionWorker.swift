@@ -31,8 +31,8 @@ class URLSessionWorker: NSObject {
                                       timeout: Double = 5,
                                       responseType: T.Type,
                                       completionHandler: @escaping(Result<T, NetworkingError>) -> Void) {
-        if let anUrl: URL = URL(string: url) {
-            var urlRequest: URLRequest = URLRequest(url: anUrl)
+        if let url: URL = URL(string: url) {
+            var urlRequest: URLRequest = URLRequest(url: url)
             urlRequest.timeoutInterval = timeout
             setHeaders(urlRequest: &urlRequest, headers: headers)
             urlRequest.httpMethod = httpMethod.rawValue
@@ -66,7 +66,7 @@ class URLSessionWorker: NSObject {
 
 extension URLSessionWorker: URLSessionDelegate {
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        completionHandler(.useCredential, URLCredential.init())
+        completionHandler(.useCredential, URLCredential())
     }
 
     func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {

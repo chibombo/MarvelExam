@@ -10,7 +10,7 @@ import MBProgressHUD
 
 class BaseViewController: UIViewController {
     
-    var hud: MBProgressHUD?
+    private var hud: MBProgressHUD?
     
     override func viewDidLoad() {
         super.viewDidLoad()
