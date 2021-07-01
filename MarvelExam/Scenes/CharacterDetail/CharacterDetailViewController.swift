@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 import SkeletonView
 
-protocol CharacterDetailDisplayLogic: class {
+protocol CharacterDetailDisplayLogic: AnyObject {
     func displayDetail(detail: Character)
     func displayAlert(title: String, message: String)
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CharactersListDisplayLogic: class {
+protocol CharactersListDisplayLogic: AnyObject {
     func displayCharacters(characters: [Character])
     func displayAlert(title: String, message: String)
 }

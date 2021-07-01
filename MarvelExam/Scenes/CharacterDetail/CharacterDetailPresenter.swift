@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CharacterDetailPresentationLogic: class {
+protocol CharacterDetailPresentationLogic: AnyObject {
     func presentDetail(response: CharacterDetailResponse)
     func presentAlert(error: Error)
 }

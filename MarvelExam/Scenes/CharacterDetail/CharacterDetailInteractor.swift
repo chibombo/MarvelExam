@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CharacterDetailBusinessLogic: class {
+protocol CharacterDetailBusinessLogic: AnyObject {
     func getCharacterDetail(request: CharacterDetailRequest)
 }
 

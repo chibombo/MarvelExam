@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CharactersListRoutingLogic: class {
+protocol CharactersListRoutingLogic: AnyObject {
     var navigationController: UINavigationController? {get}
 
     func routeToDetail(id: Int)

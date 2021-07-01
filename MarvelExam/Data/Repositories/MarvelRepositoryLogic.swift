@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MarvelRepositoryLogic: class {
+protocol MarvelRepositoryLogic: AnyObject {
     func fetchCharacters(completionHandler: @escaping(Result<FetchCharactersResponse, NetworkingError>) -> Void)
     func fetchCharacterDetail(request: CharacterDetailRequest, completionHandler: @escaping(Result<CharacterDetailResponse, NetworkingError>) -> Void)
 }
