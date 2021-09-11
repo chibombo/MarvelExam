@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>432182073825-ikfsmu9s6albsbfhumg0f9ved7tftst1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.432182073825-ikfsmu9s6albsbfhumg0f9ved7tftst1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC9vCj1ARIRUnTXWVuH57Uk-hUt4qZY1v8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>432182073825</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>mx.com.SrPago.MarvelExam</string>
+	<key>PROJECT_ID</key>
+	<string>poc-fastlane</string>
+	<key>STORAGE_BUCKET</key>
+	<string>poc-fastlane.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:432182073825:ios:9e9a6318a9308851f8daa0</string>
+</dict>
+</plist>

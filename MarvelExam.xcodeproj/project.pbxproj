@@ -81,6 +81,10 @@
 		C692CC28260AA64800B34BEE /* URLSessionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692CC27260AA64800B34BEE /* URLSessionWorker.swift */; };
 		C692CC36260AB83500B34BEE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692CC35260AB83500B34BEE /* String+Extension.swift */; };
 		C6DEB8E1260A696900855358 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8E0260A696900855358 /* Character.swift */; };
+		F1937F3A268E493000748B45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1937F39268E493000748B45 /* GoogleService-Info.plist */; };
+		F1937F3D268E49EA00748B45 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F1937F3C268E49EA00748B45 /* FirebaseAnalytics */; };
+		F1937F3F268E7C7C00748B45 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F1937F3E268E7C7C00748B45 /* FirebaseAnalytics */; };
+		F1937F40268E7D5D00748B45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1937F39268E493000748B45 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +159,7 @@
 		C692CC27260AA64800B34BEE /* URLSessionWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWorker.swift; sourceTree = "<group>"; };
 		C692CC35260AB83500B34BEE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C6DEB8E0260A696900855358 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		F1937F39268E493000748B45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +169,7 @@
 			files = (
 				C62BD19E260BCACD0049BC5E /* MBProgressHUD in Frameworks */,
 				C62BD21A260BFDCF0049BC5E /* SkeletonView in Frameworks */,
+				F1937F3F268E7C7C00748B45 /* FirebaseAnalytics in Frameworks */,
 				C62BD157260BB92C0049BC5E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +194,7 @@
 			files = (
 				C62BD197260BCAB70049BC5E /* MBProgressHUD in Frameworks */,
 				C62BD214260BFDC20049BC5E /* SkeletonView in Frameworks */,
+				F1937F3D268E49EA00748B45 /* FirebaseAnalytics in Frameworks */,
 				C62BD0F2260BA7C60049BC5E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +278,7 @@
 		C62BD1B4260BCFB30049BC5E /* Production */ = {
 			isa = PBXGroup;
 			children = (
+				F1937F39268E493000748B45 /* GoogleService-Info.plist */,
 				C682DEAB2609520B00F5329D /* MarvelExamInfo.plist */,
 			);
 			name = Production;
@@ -556,6 +564,7 @@
 				C62BD144260BB92C0049BC5E /* Kingfisher */,
 				C62BD19D260BCACD0049BC5E /* MBProgressHUD */,
 				C62BD219260BFDCF0049BC5E /* SkeletonView */,
+				F1937F3E268E7C7C00748B45 /* FirebaseAnalytics */,
 			);
 			productName = MarvelExam;
 			productReference = C62BD161260BB92C0049BC5E /* MarvelExamDev.app */;
@@ -615,6 +624,7 @@
 				C62BD0F1260BA7C60049BC5E /* Kingfisher */,
 				C62BD196260BCAB70049BC5E /* MBProgressHUD */,
 				C62BD213260BFDC20049BC5E /* SkeletonView */,
+				F1937F3C268E49EA00748B45 /* FirebaseAnalytics */,
 			);
 			productName = MarvelExam;
 			productReference = C682DE9A2609520A00F5329D /* MarvelExam.app */;
@@ -655,6 +665,7 @@
 				C62BD0F0260BA7C60049BC5E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				C62BD195260BCAB70049BC5E /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 				C62BD212260BFDC20049BC5E /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				F1937F3B268E49EA00748B45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = C682DE9B2609520A00F5329D /* Products */;
 			projectDirPath = "";
@@ -674,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62BD190260BBDDF0049BC5E /* FetchCharactersResponse.json in Resources */,
+				F1937F40268E7D5D00748B45 /* GoogleService-Info.plist in Resources */,
 				C62BD1FB260BF7550049BC5E /* CharacterDetailResponse.json in Resources */,
 				C62BD159260BB92C0049BC5E /* .swiftlint.yml in Resources */,
 				C62BD20D260BFA0A0049BC5E /* CharacterDetailViewController.xib in Resources */,
@@ -706,6 +718,7 @@
 				C682DEA72609520B00F5329D /* Assets.xcassets in Resources */,
 				C62BD20C260BFA0A0049BC5E /* CharacterDetailViewController.xib in Resources */,
 				C682DEA52609520A00F5329D /* Main.storyboard in Resources */,
+				F1937F3A268E493000748B45 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -880,7 +893,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "-DDEV";
-				PRODUCT_BUNDLE_IDENTIFIER = mx.com.GAR.MarvelExamDev;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.SrPago.MarvelExamDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -899,7 +912,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "-DDEV";
-				PRODUCT_BUNDLE_IDENTIFIER = mx.com.GAR.MarvelExamDev;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.SrPago.MarvelExamDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1105,16 +1118,23 @@
 		C682DEC52609520B00F5329D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 5DPE4X2TAL;
 				INFOPLIST_FILE = MarvelExam/Support/MarvelExamInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.2;
 				OTHER_SWIFT_FLAGS = "-DPRODUCTION";
-				PRODUCT_BUNDLE_IDENTIFIER = mx.com.GAR.MarvelExam;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.SrPago.MarvelExam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1124,16 +1144,23 @@
 		C682DEC62609520B00F5329D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 5DPE4X2TAL;
 				INFOPLIST_FILE = MarvelExam/Support/MarvelExamInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.2;
 				OTHER_SWIFT_FLAGS = "-DPRODUCTION";
-				PRODUCT_BUNDLE_IDENTIFIER = mx.com.GAR.MarvelExam;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.SrPago.MarvelExam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1223,6 +1250,14 @@
 				minimumVersion = 1.13.0;
 			};
 		};
+		F1937F3B268E49EA00748B45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1255,6 +1290,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C62BD212260BFDC20049BC5E /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
+		};
+		F1937F3C268E49EA00748B45 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1937F3B268E49EA00748B45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F1937F3E268E7C7C00748B45 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1937F3B268E49EA00748B45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

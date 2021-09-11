@@ -1,0 +1,213 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+require 'securerandom'
+default_platform(:ios)
+
+platform :ios do
+
+  lane :tests do    
+    run_tests(devices: ["iPhone 8"],
+              scheme: "MarvelExamDev"
+              )
+  end
+
+  lane :build do
+    #buildBumber = get_info_plist_value(path: "MarvelExam/Support/Info.plist", key: "CFBundleVersion")
+    UI.important "==================================================================="
+    UI.important "======================== BUILDING VERSION ========================"
+    UI.important "==================================================================="
+    gym(
+      scheme: "MarvelExam",
+      configuration: "Release",
+      output_directory: "./",
+      output_name: "IPA",
+      export_method: "ad-hoc",
+      export_xcargs: "-allowProvisioningUpdates"
+    )
+  end
+
+  lane :lint do
+    UI.important "==================================================================="
+    UI.important "======================== LINT ========================"
+    UI.important "==================================================================="
+    swiftlint(
+      mode: :lint,      # SwiftLint mode: :lint (default) or :autocorrect
+      output_file: "./SwiftlintResult.html", # The path of the output file (optional)      
+      raise_if_swiftlint_error: true,      # Allow fastlane to raise an error if swiftlint fails
+      ignore_exit_status: true    # Allow fastlane to continue even if SwiftLint returns a non-zero exit status
+    )
+  end
+
+  lane :deploy do |options|
+    import("keys")
+    UI.important "==================================================================="
+    UI.important "======================== DEPLOYING VERSION ========================"
+    UI.important "==================================================================="
+    release_notes = ""
+    uuid = ""
+    if options[:log] != nil
+      release_notes = options[:log]
+    end
+    if options[:id] != nil
+      uuid = options[:id]
+    end
+    release_notes += "\n" + uuid 
+    firebase_app_distribution(
+      app: "1:432182073825:ios:9e9a6318a9308851f8daa0",
+      ipa_path: "./IPA.ipa",
+      firebase_cli_token: ENV["FIREBASE_TOKEN"],
+      release_notes: release_notes,
+      groups: "iOS-Team"
+    )
+    
+  end
+
+  desc "Test, Build and Deploy for QA"
+  lane :qa do    
+    username = sh("git config user.email")
+
+    begin 
+      username["@srpago.com"] = ""
+    rescue Exception
+      username = "Stranger"
+    end
+
+    welcome_msg = "Hello " + username + "! Welcome to the QA version setup!"
+    vthread = Thread.new do
+    end
+    UI.message welcome_msg
+    vthread.join
+
+    generateLog()
+  end
+
+lane :generateLog do |user|
+  username = ""
+  uuid = SecureRandom.uuid
+  build = get_build_number_from_xcodeproj(xcodeproj: "MarvelExam.xcodeproj", 
+    target: "MarvelExam",
+    build_configuration_name: 'Release')
+  version = get_version_number_from_plist(xcodeproj: "MarvelExam.xcodeproj", 
+    target: "MarvelExam",
+    plist_build_setting_support: true,
+    build_configuration_name: 'Release')
+  if user[:name] != nil 
+    username = user[:name]
+  end
+  changelog_msg = "1) Please enter the title for your changelog (Press Enter Key to omit)"
+  vthread = Thread.new do 
+  end
+  titleInput = UI.input(changelog_msg)
+  vthread.join
+
+  description_msg = "2) Please enter your log for the fast delivery!\n\n" + "Example, Mob01: Example"
+
+  descriptionInput =  prompt(
+    text: description_msg,
+    multi_line_end_keyword: "END"
+  )
+
+  vthread.join
+
+  UI.important "======================== GENERATED RELEASE NOTES ========================"
+  puts "\n" + descriptionInput
+  UI.important "========================================================================="
+
+  vthread.join
+
+  startDeployment = UI.select("Are those right?", ["yes", "no"])
+
+  vthread.join
+
+  if startDeployment == "yes"
+
+    release_notes = titleInput + "\n" + descriptionInput
+
+    lint()
+    # Here run unit test
+    tests()
+    # then build
+    build()
+    # then deploy
+    deploy(log:release_notes, id:uuid)
+
+    slack(
+      message: "MarvelExam successfully released!\n" + release_notes,      
+      slack_url: "",
+      channel: "#fastlane-test",  # Optional, by default will post to the default channel configured for the POST URL.
+      success: true,        # Optional, defaults to true.
+      payload: {  # Optional, lets you specify any number of your own Slack attachments.
+        "Build Date" => Time.new.to_s,
+        "Built by" => username,
+      },
+      default_payloads: [:git_branch, :git_author], # Optional, lets you specify default payloads to include. Pass an empty array to suppress all the default payloads.
+      attachment_properties: { # Optional, lets you specify any other properties available for attachments in the slack API (see https://api.slack.com/docs/attachments).
+           # This hash is deep merged with the existing properties set using the other properties above. This allows your own fields properties to be appended to the existing fields that were created using the `payload` property for instance.
+        thumb_url: "http://example.com/path/to/thumb.png",
+        fields: [{
+          title: "UUID",
+          value: uuid,
+          short: false
+        },
+        {
+          title: "Version Number",
+          value: version,
+          short: true
+        },
+        {
+          title: "Build Number",
+          value: build,
+          short: true
+        }]
+      }
+    )
+
+    # slack(
+    #   #message: "MarvelExam successfully released!",
+    #   #pretext: release_notes,
+    #   slack_url: "https://hooks.slack.com/services/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",
+    #   channel: "#fastlane-test",  # Optional, by default will post to the default channel configured for the POST URL.
+    #   success: true,        # Optional, defaults to true.
+    #   payload: {  # Optional, lets you specify any number of your own Slack attachments.
+    #     "Build Date" => Time.new.to_s,
+    #     "Built by" => username,
+    #   },
+    #   default_payloads: [:git_branch, :git_author], # Optional, lets you specify default payloads to include. Pass an empty array to suppress all the default payloads.
+    #   attachment_properties: 
+    #     {
+    #     blocks: [
+    #       {
+    #       type: "header",
+    #       text: {
+    #         type: "mrkdwn",
+    #         text: "*MarvelExam successfully released!*"
+    #       }
+    #     }, 
+    #     {
+    #       type: "section",
+    #       text: {
+    #         type: "plain_text",
+    #         text: release_notes
+    #       }
+    #     }
+    #   ]
+    #   } 
+    # )
+  else 
+    generateLog()
+  end
+end
+
+end
